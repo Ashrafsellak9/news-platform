@@ -1,46 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Application News App - Consultez les actualités et créez vos propres articles." />
+    <meta name="author" content="[Votre Nom et Prénom]" />
     <title>News App</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="/">News App</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/news.html">Articles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/create.html">Créer</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="/">News App</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/news.html">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/create.html">Créer</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-    <main class="container mt-4">
-        <h1>Bienvenue sur News App</h1>
-        <p>Consultez les dernières actualités ou créez vos propres articles.</p>
-        
-        <!-- Section des derniers articles -->
-        <section id="latest-news" class="mt-4">
-            <h2>Derniers Articles</h2>
-            <div id="news-container" class="row">
-                <!-- Les articles seront ajoutés ici dynamiquement -->
-            </div>
-        </section>
+    <!-- Main Content -->
+    <main class="container mt-5">
+      <div class="text-center">
+        <h1 class="display-4">Bienvenue sur <span class="text-primary">News App</span></h1>
+        <p class="lead">Consultez les dernières actualités ou créez vos propres articles pour partager vos idées avec le monde.</p>
+      </div>
+
+      <!-- Section Derniers Articles -->
+      <section id="latest-news" class="mt-5">
+        <h2 class="mb-4">📰 Derniers Articles</h2>
+        <div id="news-container" class="row g-4">
+          <!-- Les articles seront ajoutés ici dynamiquement -->
+          <p class="text-muted">Chargement des articles...</p>
+        </div>
+      </section>
     </main>
 
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3 mt-5">
+      <div class="container">
+        <p class="mb-0">&copy; 2025 News App. Tous droits réservés. | Développé par Sellak Achraf</p>
+        <p class="small text-muted">"Partageons les nouvelles, créons l'avenir."</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/main.js"></script>
-</body>
+  </body>
 </html>

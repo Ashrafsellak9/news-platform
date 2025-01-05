@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Créer un Article - News App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="/">News App</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/news.html">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/create.html">Créer</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container mt-4">
+      <h1>Créer un nouvel Article</h1>
+      <p>Remplissez le formulaire ci-dessous pour ajouter un article à la plateforme.</p>
+      <form id="create-article-form" class="mt-4 needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="article-title" class="form-label">Titre de l'article <span class="text-danger">*</span></label>
+          <input
+            type="text"
+            class="form-control"
+            id="article-title"
+            placeholder="Entrez le titre de l'article"
+            required
+          />
+          <div class="invalid-feedback">Veuillez entrer un titre valide.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="article-body" class="form-label">Contenu de l'article <span class="text-danger">*</span></label>
+          <textarea
+            class="form-control"
+            id="article-body"
+            rows="6"
+            placeholder="Rédigez le contenu de l'article"
+            required
+          ></textarea>
+          <div class="invalid-feedback">Veuillez entrer un contenu valide.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="article-link" class="form-label">Lien associé (optionnel)</label>
+          <input
+            type="url"
+            class="form-control"
+            id="article-link"
+            placeholder="Entrez un lien (ex : https://exemple.com)"
+          />
+          <div class="invalid-feedback">Veuillez entrer un lien valide.</div>
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">Publier l'article</button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="bg-light text-center py-3 mt-4">
+      <p class="mb-0">&copy; 2024 News App. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/create.js"></script>
+  </body>
+</html>
