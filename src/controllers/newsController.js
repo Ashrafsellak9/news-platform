@@ -1,8 +1,8 @@
 const axios = require("axios");
-const DUMMY_JSON_URL = "https://dummyjson.com/posts"; // Vérifiez que cette URL est correcte pour l'API
+const DUMMY_JSON_URL = "https://dummyjson.com/posts"; 
 
 const newsController = {
-  // Récupérer tous les articles
+
   async getAllNews(req, res) {
     try {
       const response = await axios.get(DUMMY_JSON_URL); // Méthode GET pour récupérer les articles
@@ -13,7 +13,7 @@ const newsController = {
     }
   },
 
-  // Récupérer un article par ID
+ 
   async getNewsById(req, res) {
     const { id } = req.params;
     try {
@@ -25,7 +25,7 @@ const newsController = {
     }
   },
 
-  // Créer un nouvel article
+
   async createNews(req, res) {
     const { title, body, link } = req.body;
     try {
@@ -38,7 +38,7 @@ const newsController = {
     }
   },
 
-  // Mettre à jour un article
+  
   async updateNews(req, res) {
     const { id } = req.params;
     const { title, body, link } = req.body;
@@ -51,7 +51,7 @@ const newsController = {
     }
   },
 
-  // Supprimer un article
+
   async deleteNews(req, res) {
     const { id } = req.params;
     try {
